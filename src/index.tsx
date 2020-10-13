@@ -1,9 +1,14 @@
-import { NativeModules } from 'react-native';
+import React from 'react'
+import { requireNativeComponent, ViewStyle } from 'react-native'
 
-type AwesomeNaverMapsType = {
-  multiply(a: number, b: number): Promise<number>;
-};
+interface NaverMapProps {
+  style?: ViewStyle
+}
 
-const { AwesomeNaverMaps } = NativeModules;
+const NativeNaverMapView = requireNativeComponent<NaverMapProps>('NaverMap')
 
-export default AwesomeNaverMaps as AwesomeNaverMapsType;
+const NaverMap = ({ style }: NaverMapProps) => {
+  return <NativeNaverMapView style={style} />
+}
+
+export default NaverMap

@@ -75,7 +75,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "//commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "yarn lint && yarn typescript"
     }
   },
@@ -121,11 +121,10 @@
   },
   "eslintIgnore": ["node_modules/", "lib/"],
   "prettier": {
-    "quoteProps": "consistent",
+    "bracketSpacing": true,
     "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
+    "tabWidth": 4,
+    "semi": false
   },
   "@react-native-community/bob": {
     "source": "src",

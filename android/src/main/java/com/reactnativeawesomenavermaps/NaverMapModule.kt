@@ -5,10 +5,9 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
 
-class AwesomeNaverMapsModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
-
+class NaverMapModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
     override fun getName(): String {
-        return "AwesomeNaverMaps"
+        return "NaverMap"
     }
 
     // Example method

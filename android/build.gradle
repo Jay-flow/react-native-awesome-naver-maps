@@ -119,6 +119,9 @@ repositories {
                     "Ensure you have you installed React Native as a dependency in your project and try again."
     )
   }
+  maven {
+    url 'https://navercorp.bintray.com/maps'
+  }
 }
 
 def kotlin_version = getExtOrDefault('kotlinVersion')
@@ -126,5 +129,6 @@ def kotlin_version = getExtOrDefault('kotlinVersion')
 dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
+  implementation 'com.naver.maps:map-sdk:3.9.1'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
